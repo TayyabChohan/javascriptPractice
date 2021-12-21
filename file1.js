@@ -165,14 +165,161 @@
 
 ///////////////////////// destruring .////////////
 
-let temp = ["ab", "bd", "dd"];
-let tep1 = temp[0];
-let tep2 = temp[1];
-console.log(tep1, tep2);
+// let temp = ["ab", "bd", "dd"];
+// let tep1 = temp[0];
+// let tep2 = temp[1];
+// console.log(tep1, tep2);
 
-let [ab, bd, dd] = temp;
-console.log(ab, bd, dd);
+// let [ab, bd, dd] = temp;
+// console.log(ab, bd, dd);
 
-let temp1 = ["vv", "vvv", "bb", "hh", "rr", "uu"];
-let [vv, vvv, ...newArry] = temp1;
-console.log(newArry);
+// let temp1 = ["vv", "vvv", "bb", "hh", "rr", "uu"];
+// let [vv, vvv, ...newArry] = temp1;
+// console.log(newArry);
+
+////////////////////////////////// how we can add key par values in object////////////////
+// let obj = {
+//   name: "tayyab",
+//   age: 22,
+//   arr: ["ratatv", "ali", "dddd"],
+// };
+// obj.gender = "male";
+// obj.gender1 = "female";
+// console.log(obj["name"]);
+// console.log(obj);
+
+// ////////////////// get data from object , dot notation and brakect notation//////////
+// const key = "email";
+// let obj = {
+//   name: "tayyab",
+//   age: 22,
+//   "vvcvc arr": ["ratatv", "ali", "dddd"],
+// };
+// //console.log(obj.vvcvc arr)// not possible
+// console.log(obj["vvcvc arr"]); // possible
+// /////////// to save value of bject against its key
+// obj[key] = "tayyachohan@gamil.com";
+// console.log(obj);
+
+/////////////// iteration of objct//////////////
+
+// let obj = {
+//   name: "tayyab",
+//   age: 22,
+//   "vvcvc arr": ["ratatv", "ali", "dddd"],
+// };
+// for (key in obj) {
+//   //   console.log(key);
+//   //   console.log(obj[key]);
+//   //   console.log(`${key}: ${obj[key]}`);
+//   console.log(Object.keys(obj));
+// }
+//////////////////////// computed value////////////////
+// const key1 = "value1";
+// const key2 = "value2";
+
+// let obj = {};
+// obj[key1] = "value1";
+// obj[key2] = "value2"    ;
+// console.log(obj);
+
+/////////////////////spread operator///////////////////
+// const obj = [1, 2, 3, 4];
+// const obj1 = [5, 6, 7, 8];
+// const final = [...obj, ...obj1];
+// const final1 = [...obj, ...obj1, 3, 4, 5, 5566, 7];
+// console.log(final);
+// console.log(final1);
+
+// console.log([..."234555667"]);
+// const b = [{ ananna: "ff", dsfsdf: "ggh" }];
+// console.log([...b]);
+
+//////////////////spread operator in objects
+// const obj = {
+//   name: "tayayb",
+//   age: 22,
+// };
+// const obj1 = {
+//   name1: "tayayb1",
+//   age1: 221,
+// };
+
+// const final = { ...obj, ...obj1 };
+// console.log(final);
+
+/////////////////////destruturing in object/////////////////
+// const obj = {
+//   names: "tayyab",
+//   age: 33,
+//   dd: 78,
+//   sadas: "sadas",
+// };
+// const newObj = obj.names;
+// const newObj1 = obj.age;
+// const { names, age, ...restprops } = obj;
+// console.log(names, age);
+// console.log(restprops);
+//////////////////////////////////////// object is array////////////
+// const users = [
+//   { id: 1, name: "tayyab", age: 34, hhh: "erewr" },
+//   { id: 2, name: "tayyab", age: 34, hhh: "erewr" },
+//   { id: 3, sname: "tayyab", age: 34, hhh: "erewr" },
+// ];
+// console.log(users);
+// for (key in users) {
+//   console.log(users[key].id);
+//   console.log(users[key].name);
+// }
+
+////////////////////////// use of function/////////////////
+
+// function mufunc() {
+//   console.log("tayyab is good boy");
+// }
+// mufunc();
+/////////////////////////////////////////
+// function mufusnc() {
+//   return "dddtayyab is good boy";
+// }
+// const ttt = mufusnc();
+// console.log(ttt);
+//////////////////////////////
+// function mydd(p, p1) {
+//   console.log(p + p1);
+// }
+// mydd(2, 3);
+//////////////////////////////////////////////
+// function isEven(num) {
+//   if (num % 2 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(isEven(3));
+//////////////////////////////////////////////////
+// function strinch(num) {
+//   return [...num][0];
+// }
+// console.log(strinch("tayyab"));
+/////////////////////////////////////////////////////
+
+function findch(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == num) {
+      return i;
+    }
+  }
+  return -1;
+}
+console.log(findch([1, 2, 3, 4, 5], 4));
+/////////////////////////////////////////////////
+// function strinch(num) {
+//   return [...num][0];
+// }
+// console.log(strinch("tayyab"));
+///////////////////////////////////// function expresion//////////////
+const myn = function () {
+  console.log("tayyab chohan");
+};
