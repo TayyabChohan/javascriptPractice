@@ -305,21 +305,326 @@
 // console.log(strinch("tayyab"));
 /////////////////////////////////////////////////////
 
-function findch(arr, num) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == num) {
-      return i;
-    }
-  }
-  return -1;
-}
-console.log(findch([1, 2, 3, 4, 5], 4));
+// function findch(arr, num) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == num) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+// console.log(findch([1, 2, 3, 4, 5], 4));
 /////////////////////////////////////////////////
 // function strinch(num) {
 //   return [...num][0];
 // }
 // console.log(strinch("tayyab"));
 ///////////////////////////////////// function expresion//////////////
-const myn = function () {
-  console.log("tayyab chohan");
-};
+// const myn = function () {
+//   console.log("tayyab chohan");
+// };
+////////////////////////////hoisting//////////////////////
+// myfunc(); /////////////////Cannot access 'myfunc' before initialization
+// const myfunc = () => {
+//   console.log("tayyab");
+// };
+// myfunc1(); /////////////////Cannot access 'myfunc' before initialization
+// const myfunc1 = function () {
+//   console.log("tayyab");
+// };
+// myfunc2(); /////// tayyab
+// function myfunc2() {
+//   console.log("tayyab");
+// }
+
+/////////////////////////////// lexical enviroment////////////////////
+// const myvar = "tayyab";
+// function myapp() {
+//   // const myvar = "tayyab";
+//   function d2() {
+//     // const myvar = "tufail";
+//     const d3 = () => {
+//       console.log("chohan", myvar);
+//     };
+//     d3();
+//   }
+//   console.log(myvar);
+//   d2();
+// }
+// myapp();
+//////////////////////////////////////////block scope and function sope
+// let and const are block scope  and var is function scope
+// {
+//   let temop = "tayyab";
+//   const temop1 = "tayyab";
+//   console.log(temop);
+//   console.log(temop1);
+// }
+// {
+//   let temop = "ta";
+//   const temop2 = "ta";
+//   console.log(temop);
+//   console.log(temop2);
+// }
+// const tc = "ta";
+// console.log(tc);
+
+/////////////// defualt parameters////////////////
+// function myFunc(b, c) {
+//   if (typeof c === "undefined") {
+//     c = 0;
+//   }
+//   return b + c;
+// }
+// const my = myFunc(2);
+// console.log(my);
+////////////////////// or ./////////////
+
+// function myFunc(b, c=0) {
+//   return b + c;
+// }
+// const my = myFunc(2);
+// console.log(my);
+
+/////////////////////////////rest parametre////////////////
+
+// function myFinc(a, b, ...c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// myFinc(3, 4, 45, 6, 6, 7, 8);
+///////////////////////////////////////////
+// function mySum(...numbers) {
+//   let total = 0;
+//   for (let num of numbers) {
+//     total = total + num;
+//   }
+//   return total;
+// }
+// const bb = mySum(3, 4, 45, 6, 6, 7, 8);
+// console.log(bb);
+
+///////////////////////////parameter destruting///////////////
+
+// const person = {
+//   names: "tayyab",
+//   age: 22,
+//   gender: "male",
+// };
+// function muFunc(obj) {
+//   console.log(obj.names);
+//   console.log(obj.age);
+// }
+// muFunc(person);
+
+//////////////////////////////////// callBacek
+// function fun2(dd) {
+//   console.log("ali");
+//   console.log(dd);
+// }
+// function muFunc(callback) {
+//   console.log("tayyayb");
+//   callback("hader");
+// }
+// muFunc(fun2);
+//////////////////////////funtion returning function//////////
+
+// function myFunc() {
+//   function myd() {
+//     console.log("tayyab chohan");
+//   }
+//   return myd;
+// }
+// const ans = myFunc();
+// ans();
+//////////////
+// function myFunc() {
+//   return function () {
+//     return "tayyab";
+//   };
+// }
+// const ans = myFunc();
+// console.log(ans());
+
+////////////////////////////////////////////forEach Loop//////////
+// const temp = [
+//   {
+//     names: "tayayb",
+//     age: 22,
+//     names: "tayayb",
+//     age: 22,
+//     names: "tayayb",
+//     age: 22,
+//     names: "tayayb",
+//     age: 22,
+//   },
+// ];
+// temp.forEach((element, index) => {
+//   console.log(element, index);
+// });
+///////////////////////////////map function/////////////////
+// const temp = [1, 2, 3, 5, 6, 7, 8];
+// const t = temp.map((num) => {
+//   return num * num;
+// });
+// console.log(t);
+
+///////////////////// filter method/////
+// const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const temp = function (item) {
+//   return item % 2 === 0;
+// };
+
+// const data = items.filter(temp);
+// console.log(data);
+///////////////////////////// reduce //////////////
+// const data = [1, 2, 3, 4, 5];
+// const ddd = data.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// }, 100);
+// console.log(ddd);
+////////// accumulator + currentValue  return
+//          1              2             3
+//          3              3              6
+//          6              4              10
+//          10              5              15
+///////////////////////////////////////////
+// const data = [
+//   { item: "cv", price: 10 },
+//   { item: "cv", price: 12 },
+//   { item: "cv", price: 13 },
+//   { item: "cv", price: 14 },
+// ];
+// const sum = data.reduce((totalPrice, currentPrice) => {
+//   return totalPrice + currentPrice.price;
+// }, 0);
+// console.log(sum);
+
+////// total price currentProduct return
+///////  0           10            10
+//////// 10           12            22
+////////  22           13           33
+////////   33          14           49
+////////////////////////// find method///////////////
+// const data = ["tayyab", "ali", "ssss"];
+// function myadd(string) {
+//   return string.length === 4;
+// }
+// const d = data.find(myadd);
+// console.log(d);
+////////////////////////
+// const data = ["tayyab", "ali", "ssss"];
+
+// const d = data.find((string) => {
+//   return string.length === 3;
+// });
+// console.log(d);
+////////////////////
+// const data = [
+//   { id: 1, item: "cv", price: 10 },
+//   { id: 2, item: "cv", price: 12 },
+//   { id: 3, item: "cv", price: 13 },
+//   { id: 4, item: "cv", price: 14 },
+// ];
+// const dat = data.find((user) => {
+//   return user.id == 2;
+// });
+// console.log(dat);
+/////////////////////// every mothod
+
+// const data = [1, 2, 4, 6, 8];
+// const d = data.every((item) => item % 2 === 0);
+// console.log(d); sb k sm even yan odd ho gy to true and false ho ga
+/////////////////////// some mothod
+
+// const data = [1, 2, 4, 6, 8];
+// const d = data.some((item) => item % 2 === 0);
+// console.log(d); koi ek b odd ga yan even o ga to then true otherwise false
+///////////////////////// fill method////////// it is use for to make new array
+
+// const data = new Array(20).fill(0);
+// console.log(data);
+
+//////////////////
+// const ff = [1, 1, 2, 3, 4];
+// const dd = ff.fill(0, 1, 3);
+// console.log(dd);
+
+//////////////////////////////splice method////////////
+/// start, delete , insert
+// const data = ["item1", "item2", "item3"];
+// //delete
+// // data.splice(0, 1);
+// //insert
+// data.splice(1, 0, "tayayb");
+// console.log(data);
+
+///////////////////// set
+// const ddd = new Set([1, 3, 4, 5]);
+// console.log(ddd); //// set mai duplicate allow nai hai
+// //// no idex-d=based acccess ,
+// ddd.add(7);
+// ddd.add(7); /// not allowed
+// ddd.has(1); /// check the existence of nomber 1 in set
+// for (let i of ddd) {
+//   console.log(i);
+// }
+///////////////////////////// call ////
+// const person = {
+//   age: 11,
+//   namee: "tayb",
+// };
+// const person1 = {
+//   age: 44,
+//   namee: "t",
+//   about: function (a, b) {
+//     console.log(this.age, this.namee, a, b);
+//   },
+// };
+// person1.about.call(person, "tayayaaaa", "sdsf");
+///////////////////////////////////
+// function about(a, b) {
+//   console.log(this.age, this.namee, a, b);
+// }
+// const person = {
+//   age: 11,
+//   namee: "tayb",
+// };
+// const person1 = {
+//   age: 44,
+//   namee: "t",
+// };
+// about.call(person, "tayayaaaa", "sdsf");
+///////////////////////////////////apply///////////////
+
+// function about(a, b) {
+//   console.log(this.age, this.namee, a, b);
+// }
+// const person = {
+//   age: 11,
+//   namee: "tayb",
+// };
+// const person1 = {
+//   age: 44,
+//   namee: "t",
+// };
+// about.apply(person, ["tayayaaaa", "sdsf"]);
+///////////////////////////////////bind///////////////
+
+// function about(a, b) {
+//   console.log(this.age, this.namee, a, b);
+// }
+// const person = {
+//   age: 11,
+//   namee: "tayb",
+// };
+// const person1 = {
+//   age: 44,
+//   namee: "t",
+// };
+// const h = about.bind(person, "tayayaaaa", "sdsf");
+// h()
+
+
