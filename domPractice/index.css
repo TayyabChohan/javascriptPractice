@@ -60,10 +60,25 @@ a {
   margin-top: 5rem;
   text-align: center;
 }
+.bg-background {
+  background-color: black;
+  color: aliceblue;
+}
 .form-todo {
   min-height: 5vh;
   display: flex;
   justify-content: space-between;
+}
+.todo-list {
+  text-align: left;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+.todo-list li {
+  padding: 0.7rem;
+  background: brown;
+  color: cyan;
+  margin-top: 1rem;
 }
 
 .form-todo input {
@@ -87,43 +102,31 @@ a {
   border-radius: 10px;
   padding-top: 1rem;
 }
-.singUpForm label{
-display: block;
-text-align: left;
+.singUpForm label {
+  display: block;
+  text-align: left;
 }
-.singUpForm input{
+.singUpForm input {
   display: block;
   width: 100%;
   padding: 0.5rem;
 }
 
-.singUpForm{
+.singUpForm {
   max-width: 800px;
   width: 95%;
   margin: auto;
 }
-.form-group{
+.form-group {
   margin-top: 1rem;
 }
-.singUpForm textarea{
+.singUpForm textarea {
   width: 100%;
 }
-.signUp-btn{
+.signUp-btn {
   background: #001119;
   color: white;
   padding: 1rem 2rem;
   display: block;
   margin: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
